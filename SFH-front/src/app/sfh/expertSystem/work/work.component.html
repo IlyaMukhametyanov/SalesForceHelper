@@ -1,0 +1,23 @@
+<div class="es-work container-fluid">
+   <div class="es-scriptSales">
+      <div class="read">
+         <p id="readp">Данный текст необходимо прочест: <br> {{CurrentVertes.text}}</p>
+      </div>
+      <div class="click">
+         <div *ngIf="!input">
+            <button (click)="click()">старт</button>
+         </div>
+         <div  *ngIf="CurrentLines.length>0;">
+            <div class="buttons" *ngFor="let CurrentLine of CurrentLines">
+               <button (click)="clickTo(CurrentLine)">{{CurrentLine.text}}</button>
+            </div>
+         </div>
+         <div *ngIf="CurrentLines.length==0 && input;">
+            <p>Скрипт закончен</p>
+            <a href="" [routerLink]="['/expertsystem','select']"> <span>Завершить</span>
+            </a>
+         </div>
+      </div>
+
+   </div>
+</div>

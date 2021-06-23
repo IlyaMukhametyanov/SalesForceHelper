@@ -1,0 +1,16 @@
+<div class="header"></div>
+<div class="es-create container-fluid">
+   <div class="es-create-k">
+      <div class="create">
+         <canvas width="1000" height="500" id='createcanvas'>Обновите браузер</canvas>
+      </div>
+      <div class="interface">
+         <a [routerLink]="['/expertsystem','select']">Вернутся</a>
+         <button (click)="addline()">добавить прямую</button>
+         <textarea #myArea></textarea>
+         <button (click)="load(myArea.value)">Добавить текст</button>
+         <button (click)="deletevertex()">удалить вершину</button>
+         <button (click)="SendScript()">Сохранить скрипт</button>
+      </div>
+   </div>
+</div>
